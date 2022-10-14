@@ -1,7 +1,6 @@
 # k8s
 k8s
-
-    ### INSTALL DOCKER 
+### INSTALL DOCKER 
     ```
     sudo apt-get update
     sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
@@ -15,14 +14,14 @@ k8s
     sudo service docker restart
     sudo service docker status
    ```
-    ### INSTALL KUBEADM,KUBELET,KUBECTL
+ ### INSTALL KUBEADM,KUBELET,KUBECTL
     
     sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
     sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
     sudo apt-get update ; clear
     sudo apt-get install -y kubelet=1.23.6-00 kubeadm=1.23.6-00 kubectl=1.23.6-00
 
-    ### Initialize Master Node 
+### Initialize Master Node 
     
     sudo kubeadm init --ignore-preflight-errors=all
 	
